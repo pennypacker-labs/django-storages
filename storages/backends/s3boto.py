@@ -416,7 +416,7 @@ class S3BotoStorage(Storage):
         if self.encryption:
             kwargs['encrypt_key'] = self.encryption
         key.set_contents_from_file(content, headers=headers,
-                                   policy=self.default_acl,
+                                   # policy=self.default_acl,
                                    reduced_redundancy=self.reduced_redundancy,
                                    rewind=True, **kwargs)
 
